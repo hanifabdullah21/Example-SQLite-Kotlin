@@ -10,5 +10,13 @@ class DetailStudentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_student)
+        
+        val student = intent.getParcelableExtra<StudentContract>("student")
+        Log.d("STUDENT", student.toString())
+
+        dsa_tv_name.text = student.name
+        dsa_tv_age.text = "${student.age} tahun"
+        dsa_tv_address.text = student.address
+        dsa_tv_major.text = student.majority
     }
 }
