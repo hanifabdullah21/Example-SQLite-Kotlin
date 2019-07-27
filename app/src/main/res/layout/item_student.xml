@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--TODO 3 Buat layout baru dan atur tampilannya-->
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+        <ImageView
+                android:id="@+id/is_iv_student_photo"
+                android:src="@drawable/placeholder_user"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+        <TextView
+                android:id="@+id/is_tv_student_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/is_iv_student_photo"
+                android:layout_marginLeft="10dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="Nama Siswa"/>
+
+        <TextView
+                android:id="@+id/is_tv_student_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/is_iv_student_photo"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/is_tv_student_name"
+                android:textSize="12sp"
+                tools:text="12 tahun"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
