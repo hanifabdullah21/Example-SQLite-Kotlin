@@ -40,4 +40,4 @@ class MyDatabaseHelper(context: Context) : ManagedSQLiteOpenHelper(context, "dat
 }
 
 val Context.database: MyDatabaseHelper
-    get() = MyDatabaseHelper(applicationContext)
+    get() = MyDatabaseHelper.getInstance(applicationContext)
