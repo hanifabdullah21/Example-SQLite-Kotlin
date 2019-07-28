@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.activity_detail_student.*
 import org.jetbrains.anko.db.delete
+import org.jetbrains.anko.intentFor
 
 class DetailStudentActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -30,6 +31,7 @@ class DetailStudentActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v){
             dsa_btn_delete -> deleteData(student.id)
+            dsa_btn_update -> intentFor<UpdateStudentActivity>("student" to student)
         }
     }
 
